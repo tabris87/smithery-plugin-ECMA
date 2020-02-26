@@ -6,7 +6,8 @@
     "author": "Adrian Marten",
     "license": "MIT",
     "scripts": {
-        "test": "jest --runInBand"
+        "test": "jest --runInBand",
+        "debug_test": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand"
     },
     "dependencies": {
         "escodegen": "^1.12.1",
