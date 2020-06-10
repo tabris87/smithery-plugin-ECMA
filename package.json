@@ -1,6 +1,6 @@
 {
     "name": "featurejs-plugin-ecma",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "a test plugin to provide a way to create a suitable plugin system",
     "main": "index.js",
     "author": "Adrian Marten",
