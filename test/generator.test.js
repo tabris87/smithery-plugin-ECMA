@@ -1,5 +1,5 @@
 const generator = require('../lib/generator');
-const Node = require('featurecli-commons').types.Node;
+const Node = require('smithery-equipment').types.Node;
 
 const aTests = [{
     title: 'Empty JavaScript',

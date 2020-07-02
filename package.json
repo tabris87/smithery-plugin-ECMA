@@ -1,23 +1,30 @@
 {
-    "name": "featurejs-plugin-ecma",
+    "name": "smithery-plugin-ecma",
     "version": "0.1.7",
-    "description": "a test plugin to provide a way to create a suitable plugin system",
-    "main": "index.js",
     "author": "Adrian Marten",
-    "license": "MIT",
-    "scripts": {
-        "test": "jest --runInBand",
-        "debug_test": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand"
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tabris87/smithery-plugin-ecma.git"
     },
+    "license": "Apache-2.0",
+    "description": "A plugin for smithery to support feature oriented programming with ECMA Script",
+    "scripts": {
+        "test": "jest --runInBand"
+    },
+    "main": "index.js",
+    "bugs": {
+        "url": "https://github.com/tabris87/smithery-plugin-ecma/issues"
+    },
+    "homepage": "https://github.com/tabris87/smithery-plugin-ecma#readme",
     "dependencies": {
         "escodegen": "^1.12.1",
         "espree": "^6.1.2"
     },
     "devDependencies": {
-        "featureJS": "git+https://github.com/tabris87/featureJS.git",
-        "featurecli-commons": "git+https://github.com/tabris87/featureCLI-commons.git#master",
         "jest": "^25.1.0",
-        "jest-html-reporters": "^1.2.1"
+        "jest-html-reporters": "^1.2.1",
+        "smithery": "^0.2.0",
+        "smithery-equipment": "^0.1.6"
     },
     "jest": {
         "testEnvironment": "node",
@@ -36,7 +43,7 @@
                 {
                     "filename": "./test/latestTests.html",
                     "expand": false,
-                    "pageTitle": "featureJS-plugin-JSON",
+                    "pageTitle": "smithery-plugin-ecma",
                     "hideIcon": true
                 }
             ]
