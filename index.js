@@ -8,10 +8,4 @@ module.exports = {
         fileEnding: "js",
         generator: require('./lib/generator')
     }
-    /* ,
-        dependencies: [] */
-    /* {
-        pluginName: "",
-        version: ""
-    } */
 }
