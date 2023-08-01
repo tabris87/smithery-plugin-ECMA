@@ -18,12 +18,13 @@
     "homepage": "https://github.com/tabris87/smithery-plugin-ecma#readme",
     "dependencies": {
         "escodegen": "^1.12.1",
-        "espree": "^6.1.2"
+        "eslint-visitor-keys": "^3.0.0",
+        "espree": "^9.0.0"
     },
     "devDependencies": {
         "jest": "^25.1.0",
         "jest-html-reporters": "^1.2.1",
-        "smithery": "^0.2.0",
+        "smithery": "file:../smithery/smithery-core/smithery-0.6.2.tgz",
         "smithery-equipment": "^0.1.6"
     },
     "jest": {

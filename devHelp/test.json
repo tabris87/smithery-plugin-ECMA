@@ -1,0 +1,637 @@
+{
+    "type": "Program",
+    "body": [
+        {
+            "type": "ExpressionStatement",
+            "expression": {
+                "type": "Literal",
+                "value": "use strict",
+                "raw": "\"use strict\""
+            },
+            "directive": "use strict"
+        },
+        {
+            "type": "VariableDeclaration",
+            "declarations": [
+                {
+                    "type": "VariableDeclarator",
+                    "id": {
+                        "type": "Identifier",
+                        "name": "espree"
+                    },
+                    "init": {
+                        "type": "CallExpression",
+                        "callee": {
+                            "type": "Identifier",
+                            "name": "require"
+                        },
+                        "arguments": [
+                            {
+                                "type": "Literal",
+                                "value": "espree",
+                                "raw": "'espree'"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "kind": "const"
+        },
+        {
+            "type": "FunctionDeclaration",
+            "id": {
+                "type": "Identifier",
+                "name": "createAst"
+            },
+            "expression": false,
+            "generator": false,
+            "params": [
+                {
+                    "type": "Identifier",
+                    "name": "sCodeString"
+                },
+                {
+                    "type": "Identifier",
+                    "name": "iECMAVersion"
+                }
+            ],
+            "body": {
+                "type": "BlockStatement",
+                "body": [
+                    {
+                        "type": "TryStatement",
+                        "block": {
+                            "type": "BlockStatement",
+                            "body": [
+                                {
+                                    "type": "ReturnStatement",
+                                    "argument": {
+                                        "type": "CallExpression",
+                                        "callee": {
+                                            "type": "MemberExpression",
+                                            "object": {
+                                                "type": "Identifier",
+                                                "name": "espree"
+                                            },
+                                            "property": {
+                                                "type": "Identifier",
+                                                "name": "parse"
+                                            },
+                                            "computed": false
+                                        },
+                                        "arguments": [
+                                            {
+                                                "type": "Identifier",
+                                                "name": "sCodeString"
+                                            },
+                                            {
+                                                "type": "ObjectExpression",
+                                                "properties": [
+                                                    {
+                                                        "type": "Property",
+                                                        "method": false,
+                                                        "shorthand": false,
+                                                        "computed": false,
+                                                        "key": {
+                                                            "type": "Identifier",
+                                                            "name": "range"
+                                                        },
+                                                        "value": {
+                                                            "type": "Literal",
+                                                            "value": false,
+                                                            "raw": "false"
+                                                        },
+                                                        "kind": "init"
+                                                    },
+                                                    {
+                                                        "type": "Property",
+                                                        "method": false,
+                                                        "shorthand": false,
+                                                        "computed": false,
+                                                        "key": {
+                                                            "type": "Identifier",
+                                                            "name": "loc"
+                                                        },
+                                                        "value": {
+                                                            "type": "Literal",
+                                                            "value": false,
+                                                            "raw": "false"
+                                                        },
+                                                        "kind": "init"
+                                                    },
+                                                    {
+                                                        "type": "Property",
+                                                        "method": false,
+                                                        "shorthand": false,
+                                                        "computed": false,
+                                                        "key": {
+                                                            "type": "Identifier",
+                                                            "name": "comment"
+                                                        },
+                                                        "value": {
+                                                            "type": "Literal",
+                                                            "value": true,
+                                                            "raw": "true"
+                                                        },
+                                                        "kind": "init"
+                                                    },
+                                                    {
+                                                        "type": "Property",
+                                                        "method": false,
+                                                        "shorthand": false,
+                                                        "computed": false,
+                                                        "key": {
+                                                            "type": "Identifier",
+                                                            "name": "tokens"
+                                                        },
+                                                        "value": {
+                                                            "type": "Literal",
+                                                            "value": true,
+                                                            "raw": "true"
+                                                        },
+                                                        "kind": "init"
+                                                    },
+                                                    {
+                                                        "type": "Property",
+                                                        "method": false,
+                                                        "shorthand": false,
+                                                        "computed": false,
+                                                        "key": {
+                                                            "type": "Identifier",
+                                                            "name": "ecmaVersion"
+                                                        },
+                                                        "value": {
+                                                            "type": "Identifier",
+                                                            "name": "iECMAVersion"
+                                                        },
+                                                        "kind": "init"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "handler": {
+                            "type": "CatchClause",
+                            "param": {
+                                "type": "Identifier",
+                                "name": "error"
+                            },
+                            "body": {
+                                "type": "BlockStatement",
+                                "body": [
+                                    {
+                                        "type": "ExpressionStatement",
+                                        "expression": {
+                                            "type": "CallExpression",
+                                            "callee": {
+                                                "type": "MemberExpression",
+                                                "object": {
+                                                    "type": "Identifier",
+                                                    "name": "console"
+                                                },
+                                                "property": {
+                                                    "type": "Identifier",
+                                                    "name": "log"
+                                                },
+                                                "computed": false
+                                            },
+                                            "arguments": [
+                                                {
+                                                    "type": "Identifier",
+                                                    "name": "error"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "finalizer": null
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FunctionDeclaration",
+            "id": {
+                "type": "Identifier",
+                "name": "prepareAst"
+            },
+            "expression": false,
+            "generator": false,
+            "params": [
+                {
+                    "type": "Identifier",
+                    "name": "oAST"
+                }
+            ],
+            "body": {
+                "type": "BlockStatement",
+                "body": [
+                    {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                            "type": "UnaryExpression",
+                            "operator": "delete",
+                            "prefix": true,
+                            "argument": {
+                                "type": "MemberExpression",
+                                "object": {
+                                    "type": "Identifier",
+                                    "name": "oAST"
+                                },
+                                "property": {
+                                    "type": "Identifier",
+                                    "name": "end"
+                                },
+                                "computed": false
+                            }
+                        }
+                    },
+                    {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                            "type": "UnaryExpression",
+                            "operator": "delete",
+                            "prefix": true,
+                            "argument": {
+                                "type": "MemberExpression",
+                                "object": {
+                                    "type": "Identifier",
+                                    "name": "oAST"
+                                },
+                                "property": {
+                                    "type": "Identifier",
+                                    "name": "start"
+                                },
+                                "computed": false
+                            }
+                        }
+                    },
+                    {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                                "type": "MemberExpression",
+                                "object": {
+                                    "type": "MemberExpression",
+                                    "object": {
+                                        "type": "MemberExpression",
+                                        "object": {
+                                            "type": "Identifier",
+                                            "name": "espree"
+                                        },
+                                        "property": {
+                                            "type": "Identifier",
+                                            "name": "VisitorKeys"
+                                        },
+                                        "computed": false
+                                    },
+                                    "property": {
+                                        "type": "MemberExpression",
+                                        "object": {
+                                            "type": "Identifier",
+                                            "name": "oAST"
+                                        },
+                                        "property": {
+                                            "type": "Identifier",
+                                            "name": "type"
+                                        },
+                                        "computed": false
+                                    },
+                                    "computed": true
+                                },
+                                "property": {
+                                    "type": "Identifier",
+                                    "name": "forEach"
+                                },
+                                "computed": false
+                            },
+                            "arguments": [
+                                {
+                                    "type": "ArrowFunctionExpression",
+                                    "id": null,
+                                    "expression": false,
+                                    "generator": false,
+                                    "params": [
+                                        {
+                                            "type": "Identifier",
+                                            "name": "sChildKey"
+                                        }
+                                    ],
+                                    "body": {
+                                        "type": "BlockStatement",
+                                        "body": [
+                                            {
+                                                "type": "VariableDeclaration",
+                                                "declarations": [
+                                                    {
+                                                        "type": "VariableDeclarator",
+                                                        "id": {
+                                                            "type": "Identifier",
+                                                            "name": "childs"
+                                                        },
+                                                        "init": {
+                                                            "type": "MemberExpression",
+                                                            "object": {
+                                                                "type": "Identifier",
+                                                                "name": "oAST"
+                                                            },
+                                                            "property": {
+                                                                "type": "Identifier",
+                                                                "name": "sChildKey"
+                                                            },
+                                                            "computed": true
+                                                        }
+                                                    }
+                                                ],
+                                                "kind": "var"
+                                            },
+                                            {
+                                                "type": "IfStatement",
+                                                "test": {
+                                                    "type": "CallExpression",
+                                                    "callee": {
+                                                        "type": "MemberExpression",
+                                                        "object": {
+                                                            "type": "Identifier",
+                                                            "name": "Array"
+                                                        },
+                                                        "property": {
+                                                            "type": "Identifier",
+                                                            "name": "isArray"
+                                                        },
+                                                        "computed": false
+                                                    },
+                                                    "arguments": [
+                                                        {
+                                                            "type": "Identifier",
+                                                            "name": "childs"
+                                                        }
+                                                    ]
+                                                },
+                                                "consequent": {
+                                                    "type": "BlockStatement",
+                                                    "body": [
+                                                        {
+                                                            "type": "ExpressionStatement",
+                                                            "expression": {
+                                                                "type": "CallExpression",
+                                                                "callee": {
+                                                                    "type": "MemberExpression",
+                                                                    "object": {
+                                                                        "type": "Identifier",
+                                                                        "name": "childs"
+                                                                    },
+                                                                    "property": {
+                                                                        "type": "Identifier",
+                                                                        "name": "forEach"
+                                                                    },
+                                                                    "computed": false
+                                                                },
+                                                                "arguments": [
+                                                                    {
+                                                                        "type": "ArrowFunctionExpression",
+                                                                        "id": null,
+                                                                        "expression": false,
+                                                                        "generator": false,
+                                                                        "params": [
+                                                                            {
+                                                                                "type": "Identifier",
+                                                                                "name": "c"
+                                                                            }
+                                                                        ],
+                                                                        "body": {
+                                                                            "type": "BlockStatement",
+                                                                            "body": [
+                                                                                {
+                                                                                    "type": "ExpressionStatement",
+                                                                                    "expression": {
+                                                                                        "type": "CallExpression",
+                                                                                        "callee": {
+                                                                                            "type": "Identifier",
+                                                                                            "name": "prepareAst"
+                                                                                        },
+                                                                                        "arguments": [
+                                                                                            {
+                                                                                                "type": "Identifier",
+                                                                                                "name": "c"
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "alternate": {
+                                                    "type": "BlockStatement",
+                                                    "body": [
+                                                        {
+                                                            "type": "ExpressionStatement",
+                                                            "expression": {
+                                                                "type": "CallExpression",
+                                                                "callee": {
+                                                                    "type": "Identifier",
+                                                                    "name": "prepareAst"
+                                                                },
+                                                                "arguments": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "name": "childs"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "ReturnStatement",
+                        "argument": {
+                            "type": "Identifier",
+                            "name": "oAST"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "FunctionDeclaration",
+            "id": {
+                "type": "Identifier",
+                "name": "parse"
+            },
+            "expression": false,
+            "generator": false,
+            "params": [
+                {
+                    "type": "Identifier",
+                    "name": "sCodeString"
+                },
+                {
+                    "type": "Identifier",
+                    "name": "oOptions"
+                }
+            ],
+            "body": {
+                "type": "BlockStatement",
+                "body": [
+                    {
+                        "type": "TryStatement",
+                        "block": {
+                            "type": "BlockStatement",
+                            "body": [
+                                {
+                                    "type": "VariableDeclaration",
+                                    "declarations": [
+                                        {
+                                            "type": "VariableDeclarator",
+                                            "id": {
+                                                "type": "Identifier",
+                                                "name": "oAst"
+                                            },
+                                            "init": {
+                                                "type": "CallExpression",
+                                                "callee": {
+                                                    "type": "Identifier",
+                                                    "name": "createAst"
+                                                },
+                                                "arguments": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "name": "sCodeString"
+                                                    },
+                                                    {
+                                                        "type": "Identifier",
+                                                        "name": "oOptions"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "kind": "let"
+                                },
+                                {
+                                    "type": "ExpressionStatement",
+                                    "expression": {
+                                        "type": "AssignmentExpression",
+                                        "operator": "=",
+                                        "left": {
+                                            "type": "Identifier",
+                                            "name": "oAst"
+                                        },
+                                        "right": {
+                                            "type": "CallExpression",
+                                            "callee": {
+                                                "type": "Identifier",
+                                                "name": "prepareAST"
+                                            },
+                                            "arguments": [
+                                                {
+                                                    "type": "Identifier",
+                                                    "name": "oAst"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "ReturnStatement",
+                                    "argument": {
+                                        "type": "Identifier",
+                                        "name": "oAst"
+                                    }
+                                }
+                            ]
+                        },
+                        "handler": {
+                            "type": "CatchClause",
+                            "param": {
+                                "type": "Identifier",
+                                "name": "oError"
+                            },
+                            "body": {
+                                "type": "BlockStatement",
+                                "body": [
+                                    {
+                                        "type": "ThrowStatement",
+                                        "argument": {
+                                            "type": "NewExpression",
+                                            "callee": {
+                                                "type": "Identifier",
+                                                "name": "Error"
+                                            },
+                                            "arguments": [
+                                                {
+                                                    "type": "Literal",
+                                                    "value": "Invalid ECMA-Script input!",
+                                                    "raw": "'Invalid ECMA-Script input!'"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "finalizer": null
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ExpressionStatement",
+            "expression": {
+                "type": "AssignmentExpression",
+                "operator": "=",
+                "left": {
+                    "type": "MemberExpression",
+                    "object": {
+                        "type": "Identifier",
+                        "name": "module"
+                    },
+                    "property": {
+                        "type": "Identifier",
+                        "name": "export"
+                    },
+                    "computed": false
+                },
+                "right": {
+                    "type": "ObjectExpression",
+                    "properties": [
+                        {
+                            "type": "Property",
+                            "method": false,
+                            "shorthand": true,
+                            "computed": false,
+                            "key": {
+                                "type": "Identifier",
+                                "name": "parse"
+                            },
+                            "kind": "init",
+                            "value": {
+                                "type": "Identifier",
+                                "name": "parse"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "sourceType": "script"
+}
